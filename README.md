@@ -93,9 +93,11 @@ belongs_to :sender, :class_name => "User", :foreign_key => "sender_id"
 
 belongs_to :receiver, :class_name => "User", :foreign_key => "receiver_id"
 
-validates :sender, :presence => true
+validates :sender, :presence => true, :uniqueness => { :scope => :receiver }
 validates :receiver, :presence => true
 ```
+
+Notice the uniqueness validation on `:sender` ensures that you can't accidentally follow the same person twice.
 
 The associations in `FriendRequest` are pretty straightforward; we just have to use the non-shortcut form of `belongs_to` so that we can specify a column name that's different from the default for each one-to-many.
 
