@@ -101,7 +101,7 @@ Notice the uniqueness validation on `:sender` ensures that you can't accidentall
 
 The associations in `FriendRequest` are pretty straightforward; we just have to use the non-shortcut form of `belongs_to` so that we can specify a column name that's different from the default for each one-to-many.
 
-The `has_many`s in `User` are slightly tricker, but not bad:
+The `has_many`s in `User` are slightly trickier, but not bad:
 
 ```ruby
 # app/models/user.rb
