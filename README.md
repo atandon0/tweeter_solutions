@@ -146,3 +146,7 @@ That's it for the setup. Now let's use these powerful associations to make our a
         end
 
 That's it! If you want to, you can also place a follower count (`current_user.friends_where_receiver.count`) and following count (`current_user.friends_where_sender.count`) in a sidebar or something.
+
+## Solutions
+
+A completed version is [here](../../../tweeter_solutions).
